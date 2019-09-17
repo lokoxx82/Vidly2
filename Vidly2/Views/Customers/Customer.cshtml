@@ -1,0 +1,24 @@
+﻿@model Vidly.Models.Customer
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model == null)
+{
+    <h2> The customer was not found in the DB</h2>
+}
+else
+{
+    <h2>Customer name : @Model.Name</h2>
+
+    <li>
+        Membership type : @Model.MembershipType.Name
+    </li>
+    if (Model.BirdtDate != null)
+    {
+    <li>Birth day :@Model.BirdtDate</li>
+    }
+    <li>Customer id : @Model.Id</li>
+    }
+

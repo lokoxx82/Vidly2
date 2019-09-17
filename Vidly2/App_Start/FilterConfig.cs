@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Vidly2
+namespace Vidly
 {
     public class FilterConfig
     {

@@ -1,0 +1,37 @@
+﻿
+@using Vidly.Models
+@model Vidly.ViewModel.MoviesModel
+@{
+    ViewBag.Title = "Movies";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+@if (!Model.Movies.Any())
+{
+    <p>We dont have any movies yet</p>
+}
+else
+{
+    @Html.ActionLink("NEW MOVIE","edit","Movies", null, new {@class= "btn btn-primary" })
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Movies</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (Movie movie in Model.Movies)
+        {
+            <tr>
+                <td>@Html.ActionLink(movie.Name,"edit","movies", new {id = movie.Id},null)</td>
+                <td>@movie.Genre.Name</td>
+            </tr>
+        }
+            
+        </tbody>
+    </table>
+}
+
+

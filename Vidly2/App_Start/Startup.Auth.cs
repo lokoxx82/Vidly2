@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Vidly2.Models;
+using Vidly.Models;
 
-namespace Vidly2
+namespace Vidly
 {
     public partial class Startup
     {

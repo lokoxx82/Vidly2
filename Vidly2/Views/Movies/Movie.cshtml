@@ -1,0 +1,19 @@
+﻿@model Vidly.Models.Movie
+@{
+    ViewBag.Title = "Movie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model == null)
+{
+    <h2> The movie was not found in the DB</h2>
+}
+else
+{
+    <h2>Movie name : @Model.Name</h2>
+    <li>Genre : @Model.Genre.Name</li>
+    <li>Release date :@Model.ReleaseDate</li>
+    <li>Date added : @Model.AddedDate</li>
+    <li>Numbers in stock : @Model.NumberInStock</li>
+}
+

@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Vidly2.Models;
+using Vidly.Models;
 
-namespace Vidly2.Controllers
+namespace Vidly.Controllers
 {
     [Authorize]
     public class AccountController : Controller

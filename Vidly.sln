@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly2", "Vidly2\Vidly2.csproj", "{35FF89FA-2A85-4DCA-9C12-99C87ACA17A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly", "Vidly2\Vidly.csproj", "{35FF89FA-2A85-4DCA-9C12-99C87ACA17A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly2.Tests", "Vidly2.Tests\Vidly2.Tests.csproj", "{3C9664D5-908B-4541-959A-05F11626174F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly.Tests", "Vidly2.Tests\Vidly.Tests.csproj", "{3C9664D5-908B-4541-959A-05F11626174F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

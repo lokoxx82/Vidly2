@@ -5,13 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Vidly2
+namespace Vidly
 {
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
