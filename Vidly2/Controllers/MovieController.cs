@@ -25,25 +25,28 @@ namespace Vidly.Controllers
         }
 
         #region Edit
+
         public ActionResult Edit(int? id)
         {
-            Movie movie = _context.Movies.FirstOrDefault(x => x.Id == id);
+	        Movie movie = _context.Movies.FirstOrDefault(x => x.Id == id);
 
-            MovieFormViewModel movieFormViewModel = new MovieFormViewModel
-            {
-                GenreTypes = _context.GenreTypeses.ToList()
-            };
+	        if (movie == null)
+	        {
+		        movie = new Movie
+		                {
+			                AddedDate = DateTime.Today
+		                };
+	        }
 
-            if (movie == null)
-            {
+	        MovieFormViewModel movieFormViewModel = new MovieFormViewModel
+	                                                 {
+		                                                 GenreTypes = this._context.GenreTypeses.ToList(),
+		                                                 Movie = movie
+	                                                 };
 
-                return View("MovieForm", movieFormViewModel);
-            }
-
-            movieFormViewModel.Movie = movie;
-
-            return View("MovieForm", movieFormViewModel);
+	        return View("MovieForm", movieFormViewModel);
         }
+
         #endregion
 
 

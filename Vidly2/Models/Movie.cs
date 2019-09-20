@@ -19,10 +19,9 @@ namespace Vidly.Models
         [Required]
         public string Name { get; set; }
 
-        [Required]
         public GenreTypes Genre { get; set; }
 
-        [Required]
+		[Required]
         [Display(Name = "Genre")]
         public int GenreId { get; set; }
 
